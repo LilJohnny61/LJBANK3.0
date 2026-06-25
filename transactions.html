@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LJ Bank - Transactions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="cursor-glow"></div>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><span>LJ</span> BANK</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="compte.html">Comptes</a></li>
+        <li><a href="cartes.html">Cartes</a></li>
+        <li><a class="active" href="transactions.html">Transactions</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="actions">
+        <button class="btn-login" data-face="Connexion au compte" type="button">Connexion</button>
+        <button class="btn-register" data-face="Confirmation de transaction" type="button">Confirmer</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>Transactions avec <span class="cyan">confirmation faciale</span></h1>
+      <p>Chaque virement important doit être confirmé par reconnaissance faciale afin d'éviter les validations par mot de passe ou code faible.</p>
+    </section>
+
+    <section class="section">
+      <article class="panel">
+        <h2>Nouveau virement</h2>
+        <div class="transfer-grid">
+          <label>Bénéficiaire<input type="text" value="Amina Tchoumi"></label>
+          <label>Montant<input type="text" value="150 000 FCFA"></label>
+          <label>Motif<input type="text" value="Paiement facture"></label>
+        </div>
+        <button class="primary" data-face="Confirmation de transaction de 150 000 FCFA" type="button">Valider avec le visage</button>
+      </article>
+
+      <article class="panel" style="margin-top:25px">
+        <h2>Historique récent</h2>
+        <div class="transaction-list">
+          <div class="transaction-row"><span>Supermarché Bonapriso</span><strong>-18 500 FCFA</strong><span class="muted">Aujourd'hui</span></div>
+          <div class="transaction-row"><span>Salaire mensuel</span><strong class="positive">+950 000 FCFA</strong><span class="muted">Hier</span></div>
+          <div class="transaction-row"><span>Canal+</span><strong>-12 000 FCFA</strong><span class="muted">21 juin</span></div>
+          <div class="transaction-row"><span>Virement Amina</span><strong>-150 000 FCFA</strong><span class="muted">18 juin</span></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div class="face-modal" id="faceModal" aria-hidden="true">
+    <div class="face-dialog">
+      <button class="close-modal" id="closeModal" type="button" aria-label="Fermer">×</button>
+      <h2 id="faceTitle">Reconnaissance faciale</h2>
+      <div class="face-frame"><div class="scan-line"></div><div class="face-shape"><span></span><span></span><i></i></div></div>
+      <p class="muted" id="faceText">Placez votre visage dans le cadre lumineux.</p>
+      <button class="primary" id="finishFace" type="button">Valider la reconnaissance</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <footer class="footer">
+    <h3>LJ BANK</h3>
+<footer>
+
+    <h3>LJ BANK</h3>
+
+    <p>
+        Votre partenaire financier de confiance.
+        Sécurité, innovation et performance au service de vos finances.
+    </p>
+    <div class="copyright">
+        © 2026 LJ Bank - Tous droits réservés.
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
