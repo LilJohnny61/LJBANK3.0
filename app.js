@@ -123,3 +123,14 @@ if (modal) {
 document.querySelectorAll("[data-toast]").forEach((button) => {
   button.addEventListener("click", () => showToast(button.dataset.toast));
 });
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    showToast,
+    ensureCameraVideo,
+    startCamera,
+    stopCamera,
+    openFace,
+    closeFace,
+  };
+}
