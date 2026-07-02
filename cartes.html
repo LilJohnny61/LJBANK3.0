@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; connect-src 'self'; img-src 'self'; script-src 'self'">
+  <meta name="referrer" content="no-referrer">
   <title>LJ Bank - Cartes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,9 +54,9 @@
             <span class="locked-badge" id="cardBadge">Masquées</span>
           </div>
           <div class="detail-list">
-            <div class="detail-row"><span>Numéro</span><strong data-secret="4976 1200 8821 8429">•••• •••• •••• 8429</strong></div>
-            <div class="detail-row"><span>Date d'expiration</span><strong data-secret="09/29">••/••</strong></div>
-            <div class="detail-row"><span>CVV</span><strong data-secret="418">•••</strong></div>
+            <div class="detail-row"><span>Numéro</span><strong class="secret-field" data-revealed="false">•••• •••• •••• 8429</strong></div>
+            <div class="detail-row"><span>Date d'expiration</span><strong class="secret-field" data-revealed="false">••/••</strong></div>
+            <div class="detail-row"><span>CVV</span><strong class="secret-field" data-revealed="false">•••</strong></div>
             <div class="detail-row"><span>Plafond mensuel</span><strong>2 000 000 FCFA</strong></div>
           </div>
           <div class="inline-actions">
@@ -84,16 +86,12 @@
   <div class="toast" id="toast"></div>
   <footer class="footer">
     <h3>LJ BANK</h3>
-<footer>
-
-    <h3>LJ BANK</h3>
-
     <p>
         Votre partenaire financier de confiance.
         Sécurité, innovation et performance au service de vos finances.
     </p>
     <div class="copyright">
-        © 2026 LJ Bank - Tous droits réservés.
+        &copy; 2026 LJ Bank - Tous droits réservés.
     </div>
   </footer>
   <script src="app.js"></script>
