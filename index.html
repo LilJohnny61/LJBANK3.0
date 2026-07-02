@@ -10,24 +10,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="cursor-glow"></div>
-  <header>
-    <nav class="navbar">
-      <div class="logo"><span>LJ</span> BANK</div>
-      <ul class="nav-links">
-        <li><a class="active" href="index.html">Accueil</a></li>
-        <li><a href="compte.html">Comptes</a></li>
-        <li><a href="cartes.html">Cartes</a></li>
-        <li><a href="transactions.html">Transactions</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="actions">
-        <a class="btn-login" href="compte.html">Connexion</a>
-        <a class="btn-register" href="compte.html">S'inscrire</a>
-      </div>
-    </nav>
-  </header>
+  <template id="nav-actions">
+    <a class="btn-login" href="compte.html">Connexion</a>
+    <a class="btn-register" href="compte.html">S'inscrire</a>
+  </template>
 
   <main>
     <section class="hero">
@@ -58,20 +44,7 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <h3>LJ BANK</h3>
-<footer>
-
-    <h3>LJ BANK</h3>
-
-    <p>
-        Votre partenaire financier de confiance.
-        Sécurité, innovation et performance au service de vos finances.
-    </p>
-    <div class="copyright">
-        © 2026 LJ Bank - Tous droits réservés.
-    </div>
-  </footer>
+  <script src="components.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
