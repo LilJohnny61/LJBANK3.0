@@ -97,13 +97,15 @@ document.querySelectorAll("[data-face]").forEach((button) => {
 
 if (finishFace) {
   finishFace.addEventListener("click", () => {
+    // NOTE: This is a UI prototype only. In production, facial recognition
+    // must be verified server-side before granting access. Never trust
+    // client-side biometric checks alone.
     faceText.textContent = "Reconnaissance faciale confirmee.";
     finishFace.textContent = "Acces autorise";
 
     if (pendingAction.includes("carte")) {
-      document.querySelectorAll("[data-secret]").forEach((element) => {
-        element.textContent = element.dataset.secret;
-      });
+      // Card data must be fetched from a secure server-side API after
+      // successful authentication — never embedded in client-side HTML.
       const badge = document.getElementById("cardBadge");
       if (badge) badge.textContent = "Donnees visibles";
     }
