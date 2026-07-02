@@ -1,0 +1,19 @@
+{
+  "name": "ljbank3.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
